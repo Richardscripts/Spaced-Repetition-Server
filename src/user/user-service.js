@@ -54,16 +54,16 @@ const UserService = {
       const seq = await db.from('word_id_seq').select('last_value').first();
 
       const languageWords = [
-        ['Danke', 'Thank You', 2],
-        ['Ja', 'Yes', 3],
-        ['Nein', 'No', 4],
-        ['Bitte', "Please or You're Welcome", 5],
-        ['Entschuldigen Sie', 'Excuse Me', 6],
-        ['Es tut mir leid', "I'm sorry", 7],
-        ['Wo?', 'Where', 8],
-        ['Guten Morgen', 'Good Morning', 9],
-        ['Guten Afternoon', 'Good Evening', 10],
-        ['Auf Wiedersehen', 'Goodbye', null],
+        ['Danke', 'thank you', 2],
+        ['Ja', 'yes', 3],
+        ['Nein', 'no', 4],
+        ['Bitte', "you're welcome", 5],
+        ['Entschuldigen Sie', 'excuse me', 6],
+        ['Es tut mir leid', "i'm sorry", 7],
+        ['Wo', 'where', 8],
+        ['Guten Morgen', 'good morning', 9],
+        ['Guten Abend', 'good evening', 10],
+        ['Auf Wiedersehen', 'goodbye', null],
       ];
 
       const [languageHeadId] = await trx.into('word').insert(

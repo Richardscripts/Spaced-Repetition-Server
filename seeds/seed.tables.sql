@@ -37,7 +37,7 @@ VALUES
   (6, 1, 'Es tut mir leid', 'i''m sorry', 7),
   (7, 1, 'Wo', 'where', 8),
   (8, 1, 'Guten Morgen', 'good morning', 9),
-  (9, 1, 'Guten Afternoon', 'good evening', 10),
+  (9, 1, 'Guten Abend', 'good evening', 10),
   (10, 1, 'Auf Wiedersehen', 'goodbye', null),
   (11, 2, 'Danke', 'thank you', 2),
   (12, 2, 'Ja', 'yes', 3),
@@ -47,7 +47,7 @@ VALUES
   (16, 2, 'Es tut mir leid', 'i''m sorry', 7),
   (17, 2, 'Wo', 'where', 8),
   (18, 2, 'Guten Morgen', 'good morning', 9),
-  (19, 2, 'Guten Afternoon', 'good evening', 10),
+  (19, 2, 'Guten Abend', 'good evening', 10),
   (20, 2, 'Auf Wiedersehen', 'goodbye', null);
 
 UPDATE "language" SET head = 1 WHERE id = 1;

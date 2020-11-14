@@ -1,4 +1,3 @@
-const xss = require('xss');
 const LinkedList = require('../LinkedList/LinkedList');
 
 const LanguageService = {
@@ -71,13 +70,6 @@ const LanguageService = {
       .from('language')
       .where({ user_id: list.head.value.language_id })
       .update({ total_score: list.total_score, head: list.newHead });
-  },
-
-  serializeLanguage(data) {
-    for (property in data) {
-      data[property] = xss(data[property]);
-    }
-    return data;
   },
 };
 

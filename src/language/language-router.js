@@ -29,12 +29,10 @@ languageRouter.get('/', async (req, res, next) => {
       req.app.get('db'),
       req.language.id
     );
-    res.json(
-      LanguageService.serializeLanguage({
-        language: req.language,
-        words,
-      })
-    );
+    res.json({
+      language: req.language,
+      words,
+    });
     next();
   } catch (error) {
     next(error);
@@ -54,7 +52,7 @@ languageRouter.get('/head', async (req, res, next) => {
       wordCorrectCount: correct_count,
       wordIncorrectCount: incorrect_count,
     };
-    return res.json(LanguageService.serializeLanguage(result));
+    return res.json(result);
   } catch (error) {
     next(error);
   }
@@ -99,7 +97,7 @@ languageRouter.route('/guess').post(async (req, res, next) => {
 
     await LanguageService.persistData(req.app.get('db'), list);
     //console.log(JSON.stringify(list, null, 2));
-    return res.json(LanguageService.serializeLanguage(response));
+    return res.json(response);
   } catch (error) {
     next(error);
   }
